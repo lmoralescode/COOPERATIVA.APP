@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CooperativaApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CooperativaApp.View"
+    FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Route="inicio"
+        ContentTemplate="{DataTemplate local:InicioPage}" />
+
+    <ShellContent
+        Route="login"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Shell.FlyoutItemIsVisible="False" />
+
+    <ShellContent
+        Route="registro"
+        ContentTemplate="{DataTemplate local:RegistroPage}"
+        Shell.FlyoutItemIsVisible="False" />
+
+    <FlyoutItem
+        x:Name="OpcionMenu"
+        Title="Menú principal"
+        Route="Menú principal"
+        IsVisible="False">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:MenuPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="OpcionSocios"
+        Title="Socios"
+        Route="Socios"
+        IsVisible="False">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:SociosPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="OpcionAhorros"
+        Title="Ahorros"
+        Route="Ahorros"
+        IsVisible="False">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:AhorrosPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="OpcionPrestamos"
+        Title="Préstamos"
+        Route="Prestamos"
+        IsVisible="False">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:PrestamosPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        x:Name="OpcionPagos"
+        Title="Pagos"
+        Route="Pagos"
+        IsVisible="False">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:PagosPage}" />
+    </FlyoutItem>
+
+    <MenuItem
+        x:Name="OpcionCerrarSesion"
+        Text="Cerrar sesión"/>
+    <!--Clicked="OnCerrarSesionClicked" />-->
+
+</Shell>
